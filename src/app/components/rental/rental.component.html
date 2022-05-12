@@ -1,0 +1,25 @@
+ <button *ngIf="dataLoaded==false" class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Loading...
+  </button>
+  <table class="table table-striped table-hover" style="width: 200rem;">
+      <thead class="table-dark">
+        <tr>
+      <h4>KİRA LİSTESİ</h4>
+        </tr>
+      </thead>
+      </table>
+  <div *ngFor="let rental of rentals" class="card" style="width: 200rem;">
+      <div  class="card-body">
+        <h5 class="card-title"></h5>
+  </div >
+  
+  <ul class="list-group list-group-flush">
+      <li class="list-group-item">Kira Numarası: {{rental.Id}}</li>
+      <li class="list-group-item">Kiralanan Araç Markası:{{rental.brandName}}</li>
+      <li class="list-group-item">Kiralayan Müşteri Adı:{{rental.fullName}}</li>
+      <li class="list-group-item">Kira Başlangıç Tarihi: {{rental.rentDate}}</li>
+      <li class="list-group-item">Kira Bitiş Tarihi: {{rental.returnDate}}</li>
+    </ul>
+  
+

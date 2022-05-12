@@ -1,0 +1,25 @@
+<button *ngIf="dataLoaded==false" class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Loading...
+  </button>
+<td></td>
+<table class="table table-striped table-hover" style="width: 20rem;">
+    <thead class="table-dark">
+      <tr>
+    <h4>MÜŞTERİ LİSTESİ</h4>
+      </tr>
+    </thead>
+    </table>
+<div *ngFor="let customer of customers" class="card" style="width: 20rem;">
+    <div  class="card-body">
+      <h5 class="card-title"></h5>
+</div >
+
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">Müşteri Numarası: {{customer.Id}}</li>
+    <li class="list-group-item">Kullanıcı Numarası: {{customer.userId}}</li>
+    <li class="list-group-item">Şirket Adı: {{customer.companyName}}</li>
+  </ul>
+<br>
+<br>
+<br>
